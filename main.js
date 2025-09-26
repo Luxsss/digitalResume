@@ -32,9 +32,9 @@ document.addEventListener('mousemove', (e) => {
 
 document.addEventListener('touchstart', (e) => {
   dragging = true;
-  startX = e.clientX;
-  startY = e.clientY;
-});
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+}, { passive: true });
 
 document.addEventListener('touchend', () => {
   dragging = false;
@@ -43,17 +43,20 @@ document.addEventListener('touchend', () => {
 document.addEventListener('touchmove', (e) => {
   if (!dragging) return;
 
-  let endX = e.clientX - startX;
-  let endY = e.clientY - startY;
+  let currentX = e.touches[0].clientX;
+  let currentY = e.touches[0].clientY;
+
+  let endX = currentX - startX;
+  let endY = currentY - startY;
 
   rotationY += endX * 0.3;
   rotationX -= endY * 0.3;
 
   cube.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
 
-  startX = e.clientX;
-  startY = e.clientY;
-});
+  startX = currentX;
+  startY = currentY;
+}, { passive: true });
 
 function animate() {
   if (!dragging) {
