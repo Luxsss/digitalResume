@@ -34,11 +34,11 @@ document.addEventListener('touchstart', (e) => {
   dragging = true;
   startX = e.touches[0].clientX;
   startY = e.touches[0].clientY;
-});
+}, { passive: false });
 
 document.addEventListener('touchend', () => {
   dragging = false;
-});
+}, { passive: false });
 
 document.addEventListener('touchmove', (e) => {
   if (!dragging) return;
@@ -56,7 +56,7 @@ document.addEventListener('touchmove', (e) => {
 
   startX = currentX;
   startY = currentY;
-});
+}, { passive: false });
 
 function animate() {
   if (!dragging) {
