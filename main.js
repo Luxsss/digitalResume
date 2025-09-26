@@ -43,6 +43,8 @@ document.addEventListener('touchend', () => {
 document.addEventListener('touchmove', (e) => {
   if (!dragging) return;
 
+  e.preventDefault();
+
   let currentX = e.touches[0].clientX;
   let currentY = e.touches[0].clientY;
 
