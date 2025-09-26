@@ -34,7 +34,7 @@ document.addEventListener('touchstart', (e) => {
   dragging = true;
   startX = e.touches[0].clientX;
   startY = e.touches[0].clientY;
-}, { passive: true });
+});
 
 document.addEventListener('touchend', () => {
   dragging = false;
@@ -56,7 +56,7 @@ document.addEventListener('touchmove', (e) => {
 
   startX = currentX;
   startY = currentY;
-}, { passive: true });
+});
 
 function animate() {
   if (!dragging) {
