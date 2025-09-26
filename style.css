@@ -21,8 +21,12 @@ html, body{
   left: calc(100vw - 8vw);
 }
 
-.icon-pause{
+.icon-pause, .icon-play{
   font-size: 50px !important;
+}
+
+#play{
+  display: none;
 }
 
 .cube{

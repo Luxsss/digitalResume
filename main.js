@@ -75,10 +75,14 @@ function animate() {
 
 pause.addEventListener("click" , (e) => {
   if (auto) {
-    auto = false
-  }else {
-    auto = true
+    auto = false;
+    document.getElementById("pause").style.display = "none";
+    document.getElementById("play").style.display = "block";
+  } else {
+    auto = true;
+    document.getElementById("pause").style.display = "block";
+    document.getElementById("play").style.display = "none";
   }
-})
+});
 
 animate();
