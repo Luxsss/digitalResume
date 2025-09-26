@@ -1,9 +1,11 @@
 const cube = document.querySelector('.cube');
+const pause = document.querySelector('.container-pause')
 
 let dragging = false;
 let startX, startY;
 let rotationX = -30;
 let rotationY = 15;
+let auto = true;
 
 document.addEventListener('mousedown', (e) => {
   dragging = true;
@@ -62,11 +64,21 @@ document.addEventListener('touchmove', (e) => {
 
 function animate() {
   if (!dragging) {
-    rotationX += 0.2;
-    rotationY += 0.2;
-    cube.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+    if (auto) {
+      rotationX += 0.2;
+      rotationY += 0.2;
+      cube.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+    }
   }
   requestAnimationFrame(animate);
 }
+
+pause.addEventListener("click" , (e) => {
+  if (auto) {
+    auto = false
+  }else {
+    auto = true
+  }
+})
 
 animate();
