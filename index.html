@@ -1,32 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="main.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" /></head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+<script src="main.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
+
 <body>
   <div class="container-cube">
     <div class="cube">
       <div class="side front">
-        <h1>Drag Me</h1>
+        <div class="front-container">
+          <h1>Drag Me</h1>
+          <p>Try rotating the cube!</p>
+        </div>
       </div>
+
       <div class="side back">
         <h1>Contact Me</h1>
+        <form action="#" class="contact-form">
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="ex: you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send</button>
+        </form>
       </div>
+
       <div class="side left">
         <h1>About Me</h1>
+        <div class="about-container">
+          <img
+            src="https://media.licdn.com/dms/image/v2/D4E03AQF1Bp8eLx6tjw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1714030766743?e=2147483647&v=beta&t=Jr-OSQvfKElC3ocX-N1WVBE1Pt7kmpjzeuekC9He7iE"
+            alt="Profile picture">
+          <p>
+            Hey! I'm passionate about coding and I love building creative interactive projects like this 3D
+            cube.
+          </p>
+        </div>
       </div>
+
       <div class="side right">
         <h1>Technologies</h1>
+        <div class="tech-grid">
+          <div class="tech-item"><i class="devicon-nextjs-plain"></i><span>Next.js</span></div>
+          <div class="tech-item"><i class="devicon-typescript-plain colored"></i><span>Typescript</span></div>
+          <div class="tech-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div>
+          <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+          <div class="tech-item"><i class="devicon-supabase-plain colored"></i><span>Supabase</span></div>
+          <div class="tech-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+        </div>
       </div>
       <div class="side top">
         <h1>Projects</h1>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="https://www.alexisbn.com/images/projects/portfolio.webp?height=300&width=500" alt="Portfolio">
+            <span>Portfolio</span>
+          </div>
+          <div class="project-card">
+            <img src="https://www.alexisbn.com/images/projects/dodge.webp?height=300&width=500" alt="Dodge Game">
+            <span>Dodge Game</span>
+          </div>
+          <div class="project-card">
+            <img src="https://www.alexisbn.com/images/projects/ror.webp?height=300&width=500" alt="Ror">
+            <span>Ror</span>
+          </div>
+          <div class="project-card">
+            <img src="https://www.alexisbn.com/images/projects/puissance4.webp?height=300&width=500" alt="Connect 4">
+            <span>Connect 4</span>
+          </div>
+        </div>
       </div>
       <div class="side bottom">
-        <h1>IDK</h1>
+        <div class="bottom-container">
+          <h1>Bottom Side</h1>
+          <p>
+            You’ve reached the bottom of the cube 🌍
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -35,4 +96,5 @@
     <span id="play" class="material-symbols-outlined icon-play">play_arrow</span>
   </div>
 </body>
+
 </html>
