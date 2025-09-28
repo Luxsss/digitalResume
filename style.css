@@ -344,12 +344,29 @@ body {
     box-sizing: border-box;
   }
 
-  .front  { transform: rotateY(0deg) translateZ(40vw); }
-  .back   { transform: rotateY(180deg) translateZ(40vw); }
-  .right  { transform: rotateY(90deg) translateZ(40vw); }
-  .left   { transform: rotateY(-90deg) translateZ(40vw); }
-  .top    { transform: rotateX(90deg) translateZ(40vw); }
-  .bottom { transform: rotateX(-90deg) translateZ(40vw); }
+  .front {
+    transform: rotateY(0deg) translateZ(40vw);
+  }
+
+  .back {
+    transform: rotateY(180deg) translateZ(40vw);
+  }
+
+  .right {
+    transform: rotateY(90deg) translateZ(40vw);
+  }
+
+  .left {
+    transform: rotateY(-90deg) translateZ(40vw);
+  }
+
+  .top {
+    transform: rotateX(90deg) translateZ(40vw);
+  }
+
+  .bottom {
+    transform: rotateX(-90deg) translateZ(40vw);
+  }
 
   .side h1 {
     font-size: 1rem;
@@ -428,8 +445,8 @@ body {
     left: 10px;
   }
 
-  .icon-pause, .icon-play {
+  .icon-pause,
+  .icon-play {
     font-size: 40px !important;
   }
 }
-
